@@ -12,8 +12,10 @@ app.get("/greet",(req,res)=>{
     res.render("greet");
     
 })
-app.use('*',()=>{
-    res.send("hello")
+app.all("*", (req,res) => {
+    res.status(404).json({
+        "message": "Seems you got lost"
+    })
 })
 app.listen(3000,()=>{
 console.log("Server");

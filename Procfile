@@ -1,1 +1,1 @@
-web: nodemon kirti.js
+web: node kirti.js
